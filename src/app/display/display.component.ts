@@ -36,7 +36,7 @@ moveUser(id: number){
   this.allStudentArray = del
   localStorage.setItem('students', JSON.stringify(this.allStudentArray))
 }
-
+ general:number = 0
 
 firstName = ""
 lastName= "";
@@ -47,8 +47,13 @@ password= "";
 matric=""
 
 
-saveChange(id:number){
+change(id:number){
+this.general = id
 
+}
+
+saveChange(){
+console.log(this.general);
 
 }
 }

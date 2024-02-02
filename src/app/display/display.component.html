@@ -24,9 +24,9 @@
           <td>{{array.age}}</td>
           <td>{{array.matric}}</td>
           <td>
-            <button type="button" class="btn btn-warning text-white fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" (click)="change(id)" class="btn btn-warning text-white fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Edit 
-                     </button>
+             </button>
           </td>
   
           <td>
@@ -44,7 +44,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Details</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button"  class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
   
@@ -96,7 +96,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-success fw-bold" (click)="saveChange(id)">Save changes</button>
+          <button type="button" class="btn btn-success fw-bold" (click)="saveChange()">Save changes</button>
         </div>
       </div>
     </div>
