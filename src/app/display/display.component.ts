@@ -54,6 +54,18 @@ this.general = id
 
 saveChange(){
 console.log(this.general);
-
+let editDetails={
+  firstName:this.firstName,
+  lastName: this.lastName,
+  email:this.email,
+  age:this.age,
+  address:this.address,
+  password:this.password,
+  matric:this.matric
+}
+console.log(editDetails);
+this.allStudentArray.splice(this.general,1,editDetails)
+localStorage.setItem('students', JSON.stringify(this.allStudentArray))
+window.location.reload()
 }
 }
