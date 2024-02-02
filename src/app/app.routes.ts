@@ -5,6 +5,7 @@ import { StudentsignupComponent } from './studentsignup/studentsignup.component'
 import { DisplayComponent } from './display/display.component';
 import { adminGuard } from './guards/admin.guard';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { ErrorpageComponent } from './errorpage/errorpage.component';
 
 export const routes: Routes = [
     {path:'', component:NavbarComponent},
@@ -14,5 +15,6 @@ export const routes: Routes = [
 
     {path:'dashboard', children:[
         {path:'', component:DisplayComponent}
-    ],canActivate:[adminGuard]}
+    ],canActivate:[adminGuard]},
+    {path:'**', component:ErrorpageComponent}
 ];
