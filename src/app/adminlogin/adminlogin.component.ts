@@ -31,12 +31,11 @@ loginBtn(){
 
   if (currentAdmin!==undefined) {
     let currentIndex = this.verifyAdmin.indexOf(currentAdmin) 
-    console.log(currentIndex);
+    console.log(currentAdmin);
     
-    localStorage.setItem("current_user", JSON.stringify(currentAdmin))
-    localStorage.setItem("userIndex", JSON.stringify(currentIndex))
+    localStorage.setItem("current_admin", JSON.stringify(currentAdmin))
     alert("Login Successful")
-    this.routes.navigate(['dashboard'])
+    this.routes.navigate(['/dashboard'])
 }
 }
 }
