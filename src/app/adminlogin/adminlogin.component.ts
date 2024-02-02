@@ -36,7 +36,7 @@ loginBtn(){
     localStorage.setItem("current_user", JSON.stringify(currentAdmin))
     localStorage.setItem("userIndex", JSON.stringify(currentIndex))
     alert("Login Successful")
-    this.routes.navigate(['DashBoard'])
+    this.routes.navigate(['dashboard'])
 }
 }
 }
