@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 interface studentDetails{
   firstName: String;
   lastName: String;
@@ -12,13 +13,13 @@ interface studentDetails{
 @Component({
   selector: 'app-display',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './display.component.html',
   styleUrl: './display.component.css'
 })
 export class DisplayComponent {
 
- 
+ id = 0
 show:string | number = ''
 allStudentArray:studentDetails[]=[]
 ngOnInit() {
@@ -26,6 +27,28 @@ ngOnInit() {
     this.allStudentArray = JSON.parse(localStorage.getItem('students')!);
     console.log(this.allStudentArray);
   }
+
+}
+
+moveUser(id: number){
+  console.log(id);
+ let del = this.allStudentArray.filter((contact, index)=>index!=id)
+  this.allStudentArray = del
+  localStorage.setItem('students', JSON.stringify(this.allStudentArray))
+}
+
+
+firstName = ""
+lastName= "";
+email= "";
+age= "";
+address= "";
+password= "";
+matric=""
+
+
+saveChange(id:number){
+
 
 }
 }
